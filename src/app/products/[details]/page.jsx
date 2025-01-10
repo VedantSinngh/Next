@@ -2,10 +2,9 @@ import React from 'react';
 
 const ProductDetails = () => {
     return (
-        <div>
-            <h1>Product Details</h1>
-            <p>Details for product</p>
-        </div>
+        <main style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#f0f0f0' }}>
+            <h1 style={{ color: '#333', fontSize: '2rem' }}>Products</h1>
+        </main>
     );
 };
 
