@@ -1,3 +1,4 @@
 By default, components are server components.
 In server components, you can't use hooks.
-You can use hooks in client components.('use client')
+You can use hooks in client components.('use client').
+Caching data refers to storing data temporarily so it can be accessed more quickly in future requests without fetching it repeatedly from the original source. 
