@@ -8,12 +8,8 @@ export default function Home() {
   const router = useRouter();
 
   function handleNavigate() {
-    router.push('/products');
+    router.push('/client-data-fetch');
   }
-  function handleNavigateToAccounts() {
-    router.push('/accounts');
-  }
-
   return (
     <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-950 to-blue-100 ">
       <div className="bg-black shadow-md rounded-xl p-8 max-w-md text-center border-2 border-black">
@@ -48,6 +44,12 @@ export default function Home() {
           >
             InsideRoute
           </Link>
+          <Link
+            href="/server-data-fetch"
+            className="block w-full text-white font-bold text-lg py-3 rounded-md bg-pink-300 hover:bg-pink-200 transition-colors shadow-lg"
+          >
+            Server
+          </Link>
 
         </div>
         
@@ -60,7 +62,7 @@ export default function Home() {
           onClick={handleNavigate}
           className="w-full mt-4 text-white font-bold text-lg py-3 rounded-md bg-purple-500 hover:bg-purple-700 transition-colors shadow-lg"
         >
-          Products Page (useRouter)
+          Client Site (useRouter)
         </button>
         
       </div>
