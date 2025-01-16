@@ -6,13 +6,13 @@ import { useState, useEffect } from "react";
 import useSWR from 'swr'
 
 // Fetcher function for useSWR
-const fetcher = (url) => fetch(url).then((res) => {
-  if (!res.ok) {
-    throw new Error(`Error: ${res.status} ${res.statusText}`);
+async function fetcher(url) {
+  const res = await fetch(url);
+  if(!res.ok) {
+    throw new Error(`Error:- ${res.status} ${res.statusText}`)
   }
   return res.json();
-});
-
+}
 export default function ClientSideDataFetchPage() {
   // const [loading, setLoading] = useState(false);
   // const [users, setUsers] = useState([]);
@@ -39,7 +39,7 @@ export default function ClientSideDataFetchPage() {
   //   fetchUsers();
   // }, []);
   const { data, error, isLoading } = useSWR('https://dummyjson.com/users', fetcher)
- 
+
 
   if (isLoading) {
     return (
